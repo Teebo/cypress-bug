@@ -96,6 +96,22 @@
       "options": {
         "buildTarget": "debug-nx-16:build"
       }
+    },
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/debug-nx-16/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "debug-nx-16:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "debug-nx-16:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "debug-nx-16:serve-static"
+        }
+      }
     }
   }
 }
