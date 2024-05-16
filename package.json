@@ -2,7 +2,10 @@
   "name": "@debug-nx-16/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "serve-app": "nx serve debug-nx-16",
+    "e2e": "nx e2e debug-nx-16-e2e --watch"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~16.2.0",
